@@ -63,6 +63,9 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\FpsMovement.cs" />
+    <Compile Include="Assets\Scripts\Mouselook.cs" />
+    <Compile Include="Assets\Scripts\PickingUpObject.cs" />
+    <Compile Include="Assets\Scripts\Pickupable.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/s188044/Unity-MajorProductionPrototype/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
