@@ -5,33 +5,34 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float walkSpeed;
+    public float gravity = -9.8f;
 
     CharacterController character;
     public Vector3 moveDirection;
+    private float deltaX;
+    private float deltaZ;
 
     void Awake()
     {
         character = GetComponent<CharacterController>();   
-
     }
 
     void Update()
     {
-        float horizontalMovement = Input.GetAxisRaw("Horizontal");
-        float verticalMovement = Input.GetAxisRaw("Vertical");
+        MoveDirection();
 
-        character.SimpleMove((new Vector3(horizontalMovement, 0,verticalMovement ).normalized) * walkSpeed);
+        float MoveX = Input.GetAxis ("Horizontal");
+        float MoveZ = Input.GetAxis ("Vertical");
+
+        character.SimpleMove((new Vector3(MoveX, 0,MoveZ).normalized) * walkSpeed);
     }
 
-    //void FixedUpdate()
-    //{
-    //    Move();   
-    //}
+    void MoveDirection()
+    {
+        Vector3 movement = new Vector3(deltaX, 0, deltaZ);
+        movement = transform.TransformDirection(movement);
 
-    //void Move()
-    //{
-    //    //Vector3 yVelFix = new Vector3(0, rb.velocity.y, 0);
-    //    character.velocity = moveDirection * walkSpeed * Time.deltaTime;
-    //    //rb.velocity += yVelFix;
-    //}
+        movement.y = gravity;
+        character.Move(movement * Time.deltaTime);
+    }
 }
