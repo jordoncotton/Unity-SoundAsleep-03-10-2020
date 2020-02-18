@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\Mouselook.cs" />
     <Compile Include="Assets\Scripts\PickingUpObject.cs" />
     <Compile Include="Assets\Scripts\Pickupable.cs" />
+    <Compile Include="Assets\Scripts\PlayerBehaviour.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\ProtoBehaviousBehaviour.cs" />
     <Compile Include="Assets\Scripts\SceneBehaviour.cs" />
