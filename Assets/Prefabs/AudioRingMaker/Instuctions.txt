@@ -1,0 +1,7 @@
+unpack prefab into Scene
+
+drop Script onto GameObject with the Audio Source
+
+drag and drop the audio source and object the audiosource is attached to into SoundSorc and AttachmentObj respectivley
+
+determine and imput the number by which we will multiply the volume to get the size of the sound ring into Echo
