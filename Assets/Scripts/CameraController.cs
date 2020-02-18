@@ -4,48 +4,39 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField]
-    float mousesensitivity;
+ //   public float minimumX = -60f;
+ //   public float maximumX = 60f;
+ //   public float minimumY = -360f;
+ //   public float maximumY = -360f;
 
-    float xAxisClamp = 0;
+ //   public float sensitivityX = 15f;
+ //   public float sensitivityY = 15f;
 
-    [SerializeField]
-    Transform player, playerArms;
+ //   public Camera cam;
 
-    void Update()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-    }
+ //   float rotationX = 0f;
+ //   float rotationY = 0f;
 
-    void RotateCamera()
-    {
-        float mouseX = Input.GetAxis("Mouse X");
-        float mouseY = Input.GetAxis("Mouse Y");
+	//// Use this for initialization
+	//void Start ()
+ //   {
+ //       Cursor.lockstate = CursorLockMode.Locked;
 
-        float rotAmountX = mouseX * mousesensitivity;
-        float rotAmountY = mouseY * mousesensitivity;
+ //       if(Input.GetKey(Keycode.Escape))
+ //       {
+ //           Cursor.lockstate = CursorLockMode.None;
+ //           Cursor.visible
+ //       }
+	//}
+	
+	//// Update is called once per frame
+	//void Update ()
+ //   {
+ //       rotationY += Input.GetAxis("Mouse X") * sensitivityY;
+ //       rotationX += Input.GetAxis("Mouse Y") * sensitivityX;
+ //       rotationX = Mathf.Clamp(rotationX, minimumX, maximumX);
 
-        xAxisClamp -= rotAmountY;
-
-        Vector3 rotPlayersArms = playerArms.transform.rotation.eulerAngles;
-        Vector3 rotPlayer = player.transform.rotation.eulerAngles;
-
-        rotPlayersArms.x -= rotAmountY;
-        rotPlayersArms.z = 0;
-        rotPlayer.y += rotAmountX;
-
-        if(xAxisClamp > 90)
-        {
-            xAxisClamp = 90;
-            rotPlayersArms.x = 90;
-        }
-        else if(xAxisClamp < -90)
-        {
-            xAxisClamp = -90;
-            rotPlayersArms.x = 270;
-        }
-
-        playerArms.rotation = Quaternion.Euler(rotPlayersArms);
-        player.rotation = Quaternion.Euler(rotPlayer);
-    }
+ //       transform.localEulerAngles = new Vector3(0, rotationY, 0);
+ //       cam.transform.localEulerAngles = new Vector3(-rotationX, rotationY, 0);
+	//}
 }

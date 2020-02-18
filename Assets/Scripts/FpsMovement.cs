@@ -34,15 +34,17 @@ public class FpsMovement : MonoBehaviour
 
     private void MoveCharacter()
     {
-        float deltaX = Input.GetAxis("Horizontal");
-        float deltaZ = Input.GetAxis("Vertical");
+        float deltaX = Input.GetAxis("Horizontal") * speed;
+        float deltaZ = Input.GetAxis("Vertical") * speed;
 
         Vector3 movement = new Vector3(deltaX, 0, deltaZ);
+        movement = Vector3.ClampMagnitude(movement, speed);
+
+        movement.y = gravity;
+        movement *= Time.deltaTime;
         movement = transform.TransformDirection(movement);
-        //movement = Vector3.ClampMagnitude(movement, speed);
-      
-        movement.y -= gravity;
-        charController.Move(movement * Time.deltaTime);
+
+        charController.Move(movement);
     }
 
     private void RotateCharacter()
