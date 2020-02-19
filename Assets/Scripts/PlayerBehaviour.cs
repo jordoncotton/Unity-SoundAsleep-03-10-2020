@@ -18,19 +18,22 @@ public class PlayerBehaviour : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        
+        if(EndValue >= 4)
+        {
+            SceneManager.LoadScene(2);
+        }
 	}
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Guffy"))
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
+          //  if (Input.GetKeyDown(KeyCode.E))
+            //{
                 EndValue++;
                 other.gameObject.SetActive(false);
 
-            }
+            //}
         }
     }
 }

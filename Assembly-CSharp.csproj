@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Prefabs\AudioRingMaker\SoundRingBehaviour.cs" />
+    <Compile Include="Assets\Scripts\ButtonBehaviour.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\FpsMovement.cs" />
     <Compile Include="Assets\Scripts\MonsterBehaviour.cs" />
