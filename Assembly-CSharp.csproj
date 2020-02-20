@@ -61,6 +61,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\MadeByProfessorOakie\SimpleSonarShader\Example\SimpleSonarShader_ExampleCollision.cs" />
+    <Compile Include="Assets\MadeByProfessorOakie\SimpleSonarShader\Example\SimpleSonarShader_ExampleConfigureChildren.cs" />
+    <Compile Include="Assets\MadeByProfessorOakie\SimpleSonarShader\SimpleSonarShader_Object.cs" />
+    <Compile Include="Assets\MadeByProfessorOakie\SimpleSonarShader\SimpleSonarShader_Parent.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\FpsMovement.cs" />
     <Compile Include="Assets\Scripts\Mouselook.cs" />
@@ -68,8 +72,10 @@
     <Compile Include="Assets\Scripts\Pickupable.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\triggerChangeShader.cs" />
+    <None Include="Assets\MadeByProfessorOakie\SimpleSonarShader\Readme.txt" />
     <None Include="Assets\Shaders\SimpleShader.shader" />
     <None Include="Assets\Shaders\Shader.shader" />
+    <None Include="Assets\MadeByProfessorOakie\SimpleSonarShader\SimpleSonarShader.shader" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/s188044/Unity-MajorProductionPrototype/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
