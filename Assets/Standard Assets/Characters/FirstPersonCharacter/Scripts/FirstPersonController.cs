@@ -50,7 +50,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			m_MouseLook.Init(transform , m_Camera.transform);
         }
 
-
         // Update is called once per frame
         private void Update()
         {
@@ -76,14 +75,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
         }
 
-
         private void PlayLandingSound()
         {
             m_AudioSource.clip = m_LandSound;
             m_AudioSource.Play();
             m_NextStep = m_StepCycle + .5f;
         }
-
 
         private void FixedUpdate()
         {
@@ -126,13 +123,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_MouseLook.UpdateCursorLock();
         }
 
-
         private void PlayJumpSound()
         {
             m_AudioSource.clip = m_JumpSound;
             m_AudioSource.Play();
         }
-
 
         private void ProgressStepCycle(float speed)
         {
@@ -152,7 +147,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             PlayFootStepAudio();
         }
 
-
         private void PlayFootStepAudio()
         {
             if (!m_CharacterController.isGrounded)
@@ -169,13 +163,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_FootstepSounds[0] = m_AudioSource.clip;
         }
 
-
         private void UpdateCameraPosition(float speed)
         {
          
           
         }
-
 
         private void GetInput(out float speed)
         {
@@ -208,12 +200,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
         }
 
-
         private void RotateView()
         {
             m_MouseLook.LookRotation (transform, m_Camera.transform);
         }
-
 
         private void OnControllerColliderHit(ControllerColliderHit hit)
         {
